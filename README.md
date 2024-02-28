@@ -1,4 +1,7 @@
 # CSCN8010-labs
+
+https://github.com/TessaAyv79/CSCN8010-labs/blob/5a88b7ecad6bc57b33232698d6d884c1d856d2b2/docs/MNIST_Classification_Performance_Evaluation.ipynb
+
 Here my solutions to CSCN8010 practical labs
 
 <<<<<<< HEAD
