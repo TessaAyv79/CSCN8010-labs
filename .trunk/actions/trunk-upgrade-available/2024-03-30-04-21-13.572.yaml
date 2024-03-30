@@ -1,0 +1,15 @@
+action_id: trunk-upgrade-available
+date: 2024-03-30 04:21:13
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: schedule 1h
+result:
+  exit_code: 1
+  out: ""
+  err: Exception occurred while executing 'trunk-upgrade-available'. See .trunk\out\MNwxN.yaml for details.
+  error_path: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\.trunk\out\MNwxN.yaml
+timestamp: 1711772473
+full_timestamp:
+  nanos: 572175000
+  seconds: 1711772473
+trunk_version: 1.21.0
