@@ -1,0 +1,473 @@
+trunk_cli_version: 1.21.0
+title: trufflehog exited with exit_code=2
+report:
+  - trufflehog exited with exit_code=2
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\11643.jpg'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'HOME=C:\Users\Admin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\11643.jpg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        runtime: VirtualAlloc of 262144 bytes failed with errno=1455
+        fatal error: out of memory
+
+        runtime stack:
+        runtime.throw({0x387ce11?, 0xc002bbf000?})
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/panic.go:1077 +0x65 fp=0xefe89ff500 sp=0xefe89ff4d0 pc=0xa6e225
+        runtime.sysUsedOS(0xc002baa000, 0x40000)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mem_windows.go:83 +0x1bb fp=0xefe89ff560 sp=0xefe89ff500 pc=0xa4b01b
+        runtime.sysUsed(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mem.go:77
+        runtime.(*mheap).allocSpan(0x5f22780, 0x20, 0x1, 0x9d?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mheap.go:1351 +0x487 fp=0xefe89ff600 sp=0xefe89ff560 pc=0xa5cba7
+        runtime.(*mheap).allocManual(0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mheap.go:994 +0x19 fp=0xefe89ff628 sp=0xefe89ff600 pc=0xa5c399
+        runtime.stackalloc(0x40000)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/stack.go:408 +0x152 fp=0xefe89ff698 sp=0xefe89ff628 pc=0xa84f52
+        runtime.copystack(0xc00008c000, 0x800000002?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/stack.go:874 +0xdd fp=0xefe89ff990 sp=0xefe89ff698 pc=0xa85c7d
+        runtime.newstack()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/stack.go:1116 +0x47f fp=0xefe89ffb40 sp=0xefe89ff990 pc=0xa8641f
+        runtime.morestack()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:593 +0x87 fp=0xefe89ffb48 sp=0xefe89ffb40 pc=0xaa0f87
+
+        goroutine 1 [copystack, locked to thread]:
+        runtime.mapaccess2(0x3315f40, 0xc002332e10, 0xc00234d4c8?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/map.go:457 +0x1fb fp=0xc001b6b3a8 sp=0xc001b6b3a0 pc=0xa4283b
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234d4c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:188 +0xc9 fp=0xc001b6b438 sp=0xc001b6b3a8 pc=0x122f409
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234d480?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b4c8 sp=0xc001b6b438 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002616300)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6b558 sp=0xc001b6b4c8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0026162c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b5e8 sp=0xc001b6b558 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002616280?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b678 sp=0xc001b6b5e8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002616240?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b708 sp=0xc001b6b678 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002616200?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b798 sp=0xc001b6b708 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0026161c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b828 sp=0xc001b6b798 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002616180?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b8b8 sp=0xc001b6b828 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00237dc40?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b948 sp=0xc001b6b8b8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00237dc00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6b9d8 sp=0xc001b6b948 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00299e900)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6ba68 sp=0xc001b6b9d8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00299e8c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6baf8 sp=0xc001b6ba68 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00299e880?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bb88 sp=0xc001b6baf8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0026d7240?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bc18 sp=0xc001b6bb88 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002788240)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6bca8 sp=0xc001b6bc18 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002788200?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bd38 sp=0xc001b6bca8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027881c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bdc8 sp=0xc001b6bd38 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00233d9c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6be58 sp=0xc001b6bdc8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00233d980?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bee8 sp=0xc001b6be58 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00233d940?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6bf78 sp=0xc001b6bee8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002324140?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c008 sp=0xc001b6bf78 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0025b6d00)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6c098 sp=0xc001b6c008 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0025b6cc0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c128 sp=0xc001b6c098 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0025b6c80?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c1b8 sp=0xc001b6c128 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002358640)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6c248 sp=0xc001b6c1b8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002358600?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c2d8 sp=0xc001b6c248 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0023585c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c368 sp=0xc001b6c2d8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002358580?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c3f8 sp=0xc001b6c368 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002835480)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6c488 sp=0xc001b6c3f8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002835440?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c518 sp=0xc001b6c488 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002835400?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c5a8 sp=0xc001b6c518 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0028353c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c638 sp=0xc001b6c5a8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002835380?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c6c8 sp=0xc001b6c638 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002835340?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c758 sp=0xc001b6c6c8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002643f80)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6c7e8 sp=0xc001b6c758 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002643f40?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c878 sp=0xc001b6c7e8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002643f00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c908 sp=0xc001b6c878 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002643ec0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6c998 sp=0xc001b6c908 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002643e80?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6ca28 sp=0xc001b6c998 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027b0840)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6cab8 sp=0xc001b6ca28 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027b0800?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6cb48 sp=0xc001b6cab8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027b07c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6cbd8 sp=0xc001b6cb48 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234cd00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6cc68 sp=0xc001b6cbd8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027c8800)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6ccf8 sp=0xc001b6cc68 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027c87c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6cd88 sp=0xc001b6ccf8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027c8780?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6ce18 sp=0xc001b6cd88 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027c8740?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b6cea8 sp=0xc001b6ce18 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234d9c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b6cf38 sp=0xc001b6cea8 pc=0x122f3e5
+        ...776 frames elided...
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002370dc0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b88448 sp=0xc001b883b8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002370d80?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b884d8 sp=0xc001b88448 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88568 sp=0xc001b884d8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027808c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b885f8 sp=0xc001b88568 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002780880?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88688 sp=0xc001b885f8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002752600)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b88718 sp=0xc001b88688 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027525c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b887a8 sp=0xc001b88718 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002752580?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88838 sp=0xc001b887a8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0023463c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b888c8 sp=0xc001b88838 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002346380?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88958 sp=0xc001b888c8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002346340?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b889e8 sp=0xc001b88958 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88a78 sp=0xc001b889e8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002647c80)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b88b08 sp=0xc001b88a78 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234dd00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88b98 sp=0xc001b88b08 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88c28 sp=0xc001b88b98 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002635840)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b88cb8 sp=0xc001b88c28 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002635800?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88d48 sp=0xc001b88cb8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88dd8 sp=0xc001b88d48 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0023252c0)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b88e68 sp=0xc001b88dd8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002325280?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88ef8 sp=0xc001b88e68 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b88f88 sp=0xc001b88ef8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00234c680)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b89018 sp=0xc001b88f88 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00232edc0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b890a8 sp=0xc001b89018 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89138 sp=0xc001b890a8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002346200)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b891c8 sp=0xc001b89138 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002341840?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89258 sp=0xc001b891c8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b892e8 sp=0xc001b89258 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027bf100)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b89378 sp=0xc001b892e8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0027bf0c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89408 sp=0xc001b89378 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc00236dd00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89498 sp=0xc001b89408 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89528 sp=0xc001b89498 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002872b40)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b895b8 sp=0xc001b89528 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002872b00?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89648 sp=0xc001b895b8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b896d8 sp=0xc001b89648 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002359c00)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b89768 sp=0xc001b896d8 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002346dc0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b897f8 sp=0xc001b89768 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89888 sp=0xc001b897f8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002352900)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b89918 sp=0xc001b89888 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc0023528c0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b899a8 sp=0xc001b89918 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x19375e0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89a38 sp=0xc001b899a8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002655740)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:185 +0xa5 fp=0xc001b89ac8 sp=0xc001b89a38 pc=0x122f3e5
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0xc002655700?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89b58 sp=0xc001b89ac8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x58?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89be8 sp=0xc001b89b58 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).computeFailLinks(0xc0022fd830, 0x5efaaa0?)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:201 +0x1fc fp=0xc001b89c78 sp=0xc001b89be8 pc=0x122f53c
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).Build(0xc0022fd830)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:145 +0x2b fp=0xc001b89d50 sp=0xc001b89c78 pc=0x122f02b
+        github.com/trufflesecurity/trufflehog/v3/pkg/detectors.init.0()
+        	/home/runner/work/trufflehog/trufflehog/pkg/detectors/falsepositives.go:40 +0x1b3 fp=0xc001b89e10 sp=0xc001b89d50 pc=0x12305d3
+        runtime.doInit1(0x5c01910)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:6735 +0xdd fp=0xc001b89f40 sp=0xc001b89e10 pc=0xa7df3d
+        runtime.doInit(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:6702
+        runtime.main()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:249 +0x356 fp=0xc001b89fe0 sp=0xc001b89f40 pc=0xa70b16
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc001b89fe8 sp=0xc001b89fe0 pc=0xaa2e61
+
+        goroutine 2 [force gc (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc00008ffa8 sp=0xc00008ff88 pc=0xa70eae
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:404
+        runtime.forcegchelper()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:322 +0xb8 fp=0xc00008ffe0 sp=0xc00008ffa8 pc=0xa70d18
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc00008ffe8 sp=0xc00008ffe0 pc=0xaa2e61
+        created by runtime.init.6 in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:310 +0x1a
+
+        goroutine 3 [GC sweep wait]:
+        runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000091f78 sp=0xc000091f58 pc=0xa70eae
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:404
+        runtime.bgsweep(0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgcsweep.go:321 +0xdf fp=0xc000091fc8 sp=0xc000091f78 pc=0xa590bf
+        runtime.gcenable.func1()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:200 +0x25 fp=0xc000091fe0 sp=0xc000091fc8 pc=0xa4e1e5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000091fe8 sp=0xc000091fe0 pc=0xaa2e61
+        created by runtime.gcenable in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:200 +0x66
+
+        goroutine 4 [GC scavenge wait]:
+        runtime.gopark(0xc00009c000?, 0x40d1860?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0000a3f70 sp=0xc0000a3f50 pc=0xa70eae
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:404
+        runtime.(*scavengerState).park(0x5ef9380)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc0000a3fa0 sp=0xc0000a3f70 pc=0xa56929
+        runtime.bgscavenge(0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc0000a3fc8 sp=0xc0000a3fa0 pc=0xa56ed9
+        runtime.gcenable.func2()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:201 +0x25 fp=0xc0000a3fe0 sp=0xc0000a3fc8 pc=0xa4e185
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0000a3fe8 sp=0xc0000a3fe0 pc=0xaa2e61
+        created by runtime.gcenable in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:201 +0xa5
+
+        goroutine 5 [finalizer wait]:
+        runtime.gopark(0xa40a3e?, 0x400000?, 0x70?, 0x3e?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000093e20 sp=0xc000093e00 pc=0xa70eae
+        runtime.runfinq()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mfinal.go:193 +0x107 fp=0xc000093fe0 sp=0xc000093e20 pc=0xa4d247
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000093fe8 sp=0xc000093fe0 pc=0xaa2e61
+        created by runtime.createfing in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mfinal.go:163 +0x3d
+
+        goroutine 6 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0000a5f50 sp=0xc0000a5f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0000a5fe0 sp=0xc0000a5f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0000a5fe8 sp=0xc0000a5fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 18 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc00009ff50 sp=0xc00009ff30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc00009ffe0 sp=0xc00009ff50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc00009ffe8 sp=0xc00009ffe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 34 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc00057bf50 sp=0xc00057bf30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc00057bfe0 sp=0xc00057bf50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc00057bfe8 sp=0xc00057bfe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 19 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0000a1f50 sp=0xc0000a1f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0000a1fe0 sp=0xc0000a1f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0000a1fe8 sp=0xc0000a1fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 35 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc00057df50 sp=0xc00057df30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc00057dfe0 sp=0xc00057df50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc00057dfe8 sp=0xc00057dfe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 20 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000577f50 sp=0xc000577f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000577fe0 sp=0xc000577f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000577fe8 sp=0xc000577fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 36 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000585f50 sp=0xc000585f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000585fe0 sp=0xc000585f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000585fe8 sp=0xc000585fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 21 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000579f50 sp=0xc000579f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000579fe0 sp=0xc000579f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000579fe8 sp=0xc000579fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 37 [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000587f50 sp=0xc000587f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000587fe0 sp=0xc000587f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000587fe8 sp=0xc000587fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 22 [GC worker (idle)]:
+        runtime.gopark(0x29cf66fee318?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000581f50 sp=0xc000581f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000581fe0 sp=0xc000581f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000581fe8 sp=0xc000581fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 7 [GC worker (idle)]:
+        runtime.gopark(0x29cf66fee318?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001d9f50 sp=0xc0001d9f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0001d9fe0 sp=0xc0001d9f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001d9fe8 sp=0xc0001d9fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 23 [GC worker (idle)]:
+        runtime.gopark(0x29cf67069ae0?, 0x1?, 0x8?, 0xbf?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc000583f50 sp=0xc000583f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc000583fe0 sp=0xc000583f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000583fe8 sp=0xc000583fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 38 [GC worker (idle)]:
+        runtime.gopark(0x29cf67069ae0?, 0x1?, 0x8?, 0xbf?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001d5f50 sp=0xc0001d5f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0001d5fe0 sp=0xc0001d5f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001d5fe8 sp=0xc0001d5fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 8 [GC worker (idle)]:
+        runtime.gopark(0x29cf66fee318?, 0x1?, 0xa8?, 0x5d?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001dbf50 sp=0xc0001dbf30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0001dbfe0 sp=0xc0001dbf50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001dbfe8 sp=0xc0001dbfe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 39 [GC worker (idle)]:
+        runtime.gopark(0x5f64100?, 0x1?, 0x24?, 0x19?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001d7f50 sp=0xc0001d7f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0001d7fe0 sp=0xc0001d7f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001d7fe8 sp=0xc0001d7fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 9 [GC worker (idle)]:
+        runtime.gopark(0x29cf67069ae0?, 0x1?, 0xd0?, 0x76?, 0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001e5f50 sp=0xc0001e5f30 pc=0xa70eae
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1295 +0xe5 fp=0xc0001e5fe0 sp=0xc0001e5f50 pc=0xa4fde5
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001e5fe8 sp=0xc0001e5fe0 pc=0xaa2e61
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mgc.go:1219 +0x1c
+
+        goroutine 10 [select]:
+        runtime.gopark(0xc0001e3f88?, 0x3?, 0xd8?, 0xb?, 0xc0001e3f72?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:398 +0xce fp=0xc0001e3e18 sp=0xc0001e3df8 pc=0xa70eae
+        runtime.selectgo(0xc0001e3f88, 0xc0001e3f6c, 0xc000c9cd80?, 0x0, 0x0?, 0x1)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/select.go:327 +0x725 fp=0xc0001e3f38 sp=0xc0001e3e18 pc=0xa81125
+        go.opencensus.io/stats/view.(*worker).start(0xc000c9cd80)
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:292 +0x9f fp=0xc0001e3fc8 sp=0xc0001e3f38 pc=0x117ab3f
+        go.opencensus.io/stats/view.init.0.func1()
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:34 +0x25 fp=0xc0001e3fe0 sp=0xc0001e3fc8 pc=0x1179e65
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc0001e3fe8 sp=0xc0001e3fe0 pc=0xaa2e61
+        created by go.opencensus.io/stats/view.init.0 in goroutine 1
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:34 +0x8d
+
+    parser: |
+      (none)

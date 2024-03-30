@@ -1,0 +1,412 @@
+trunk_cli_version: 1.21.0
+title: trufflehog exited with exit_code=2
+report:
+  - trufflehog exited with exit_code=2
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\train\train\cat.4056.jpg'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'HOME=C:\Users\Admin' 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\train\train\cat.4056.jpg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        runtime: VirtualAlloc of 9568256 bytes failed with errno=1455
+        fatal error: out of memory
+
+        runtime stack:
+        runtime.throw({0x31d2356?, 0xc00516e000?})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/panic.go:1023 +0x65 fp=0x7a1a5ff8a8 sp=0x7a1a5ff878 pc=0x390325
+        runtime.sysUsedOS(0xc004b90000, 0x920000)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mem_windows.go:83 +0x1bb fp=0x7a1a5ff908 sp=0x7a1a5ff8a8 pc=0x36c45b
+        runtime.sysUsed(...)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mem.go:77
+        runtime.(*mheap).allocSpan(0x5a25b40, 0x490, 0x0, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mheap.go:1347 +0x487 fp=0x7a1a5ff9a8 sp=0x7a1a5ff908 pc=0x37ee47
+        runtime.(*mheap).alloc.func1()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mheap.go:964 +0x5c fp=0x7a1a5ff9f0 sp=0x7a1a5ff9a8 pc=0x37e5fc
+        runtime.systemstack(0x5a0b700)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:509 +0x49 fp=0x7a1a5ffa00 sp=0x7a1a5ff9f0 pc=0x3c80a9
+
+        goroutine 1 gp=0xc000094000 m=0 mp=0x5a0cf20 [running]:
+        runtime.systemstack_switch()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:474 +0x8 fp=0xc0017e8ab0 sp=0xc0017e8aa0 pc=0x3c8048
+        runtime.(*mheap).alloc(0x920000?, 0x490?, 0x85?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mheap.go:958 +0x5b fp=0xc0017e8af8 sp=0xc0017e8ab0 pc=0x37e55b
+        runtime.(*mcache).allocLarge(0x8000103?, 0x91e800, 0x70?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mcache.go:234 +0x85 fp=0xc0017e8b40 sp=0xc0017e8af8 pc=0x36b205
+        runtime.mallocgc(0x91e800, 0x2b7e660, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/malloc.go:1165 +0x597 fp=0xc0017e8bc8 sp=0xc0017e8b40 pc=0x362557
+        runtime.makeslice(0xc000cd6e70?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/slice.go:107 +0x49 fp=0xc0017e8bf0 sp=0xc0017e8bc8 pc=0x3a7b49
+        github.com/BobuSumisu/aho-corasick.(*TrieBuilder).Build(0xc000cd6e70)
+        	/home/runner/go/pkg/mod/github.com/!bobu!sumisu/aho-corasick@v1.0.3/builder.go:151 +0x75 fp=0xc0017e8cc8 sp=0xc0017e8bf0 pc=0xb7edd5
+        github.com/trufflesecurity/trufflehog/v3/pkg/engine/ahocorasick.NewAhoCorasickCore({0xc000fd6008, 0x30d, 0x0?})
+        	/home/runner/work/trufflehog/trufflehog/pkg/engine/ahocorasick/ahocorasickcore.go:65 +0x20b fp=0xc0017e8df8 sp=0xc0017e8cc8 pc=0x1efa52b
+        github.com/trufflesecurity/trufflehog/v3/pkg/engine.(*Engine).initialize(0xc0001fe480, {0x3b8c5e0, 0xc000cd69f0}, {0xc0017e9a50, 0xf, 0x2b19e60?})
+        	/home/runner/work/trufflehog/trufflehog/pkg/engine/engine.go:394 +0x365 fp=0xc0017e8e88 sp=0xc0017e8df8 pc=0x242c225
+        github.com/trufflesecurity/trufflehog/v3/pkg/engine.Start({0x3b8c5e0, 0xc000cd69f0}, {0xc0017e9a50, 0xf, 0xf})
+        	/home/runner/work/trufflehog/trufflehog/pkg/engine/engine.go:337 +0x5a fp=0xc0017e8ed0 sp=0xc0017e8e88 pc=0x242bdfa
+        main.run({0x1, {0xc000cbe900, 0x28}, {0xc179fca1ee66f0fc, 0x43276991, 0x5a09640}, {0x0, 0x0}, {0x5aa3c00, 0x0, ...}, ...})
+        	/home/runner/work/trufflehog/trufflehog/main.go:435 +0x13d2 fp=0xc0017e9bb0 sp=0xc0017e8ed0 pc=0x294b8d2
+        github.com/jpillora/overseer.(*child).run(0xc00009f5e0)
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child.go:77 +0x2d5 fp=0xc0017e9cf0 sp=0xc0017e9bb0 pc=0x7a6075
+        github.com/jpillora/overseer.runErr(0xc000644f80)
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/overseer.go:164 +0x111 fp=0xc0017e9d38 sp=0xc0017e9cf0 pc=0x7a5d31
+        github.com/jpillora/overseer.RunErr(...)
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/overseer.go:94
+        main.main()
+        	/home/runner/work/trufflehog/trufflehog/main.go:240 +0x3bf fp=0xc0017e9f50 sp=0xc0017e9d38 pc=0x294a37f
+        runtime.main()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:271 +0x28b fp=0xc0017e9fe0 sp=0xc0017e9f50 pc=0x392c4b
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0017e9fe8 sp=0xc0017e9fe0 pc=0x3ca061
+
+        goroutine 2 gp=0xc000094700 m=nil [force gc (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000097fa8 sp=0xc000097f88 pc=0x39306e
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:408
+        runtime.forcegchelper()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:326 +0xb8 fp=0xc000097fe0 sp=0xc000097fa8 pc=0x392ed8
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000097fe8 sp=0xc000097fe0 pc=0x3ca061
+        created by runtime.init.6 in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:314 +0x1a
+
+        goroutine 3 gp=0xc000094a80 m=nil [GC sweep wait]:
+        runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000099f80 sp=0xc000099f60 pc=0x39306e
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:408
+        runtime.bgsweep(0xc0000a4000)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgcsweep.go:318 +0xdf fp=0xc000099fc8 sp=0xc000099f80 pc=0x37af9f
+        runtime.gcenable.gowrap1()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:203 +0x25 fp=0xc000099fe0 sp=0xc000099fc8 pc=0x36f845
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000099fe8 sp=0xc000099fe0 pc=0x3ca061
+        created by runtime.gcenable in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:203 +0x66
+
+        goroutine 4 gp=0xc000094c40 m=nil [GC scavenge wait]:
+        runtime.gopark(0x10000?, 0x3b3c370?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0000abf78 sp=0xc0000abf58 pc=0x39306e
+        runtime.goparkunlock(...)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:408
+        runtime.(*scavengerState).park(0x5a0a9e0)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc0000abfa8 sp=0xc0000abf78 pc=0x378929
+        runtime.bgscavenge(0xc0000a4000)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc0000abfc8 sp=0xc0000abfa8 pc=0x378ed9
+        runtime.gcenable.gowrap2()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:204 +0x25 fp=0xc0000abfe0 sp=0xc0000abfc8 pc=0x36f7e5
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0000abfe8 sp=0xc0000abfe0 pc=0x3ca061
+        created by runtime.gcenable in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:204 +0xa5
+
+        goroutine 18 gp=0xc0001041c0 m=nil [finalizer wait]:
+        runtime.gopark(0xc00009be60?, 0x377dfc?, 0xa0?, 0x78?, 0x550011?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00009be20 sp=0xc00009be00 pc=0x39306e
+        runtime.runfinq()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mfinal.go:194 +0x107 fp=0xc00009bfe0 sp=0xc00009be20 pc=0x36e8c7
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00009bfe8 sp=0xc00009bfe0 pc=0x3ca061
+        created by runtime.createfing in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mfinal.go:164 +0x3d
+
+        goroutine 19 gp=0xc000104380 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0000a7f50 sp=0xc0000a7f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc0000a7fe0 sp=0xc0000a7f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0000a7fe8 sp=0xc0000a7fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 34 gp=0xc000582000 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000589f50 sp=0xc000589f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000589fe0 sp=0xc000589f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000589fe8 sp=0xc000589fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 20 gp=0xc000104540 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0000a9f50 sp=0xc0000a9f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc0000a9fe0 sp=0xc0000a9f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0000a9fe8 sp=0xc0000a9fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 35 gp=0xc0005821c0 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00058bf50 sp=0xc00058bf30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc00058bfe0 sp=0xc00058bf50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00058bfe8 sp=0xc00058bfe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 21 gp=0xc000104700 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000585f50 sp=0xc000585f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000585fe0 sp=0xc000585f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000585fe8 sp=0xc000585fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 36 gp=0xc000582380 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000591f50 sp=0xc000591f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000591fe0 sp=0xc000591f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000591fe8 sp=0xc000591fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 22 gp=0xc0001048c0 m=nil [GC worker (idle)]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000587f50 sp=0xc000587f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000587fe0 sp=0xc000587f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000587fe8 sp=0xc000587fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 37 gp=0xc000582540 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb23b3541d0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000593f50 sp=0xc000593f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000593fe0 sp=0xc000593f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000593fe8 sp=0xc000593fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 23 gp=0xc000104a80 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb23b3541d0?, 0x1?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00058df50 sp=0xc00058df30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc00058dfe0 sp=0xc00058df50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00058dfe8 sp=0xc00058dfe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 38 gp=0xc000582700 m=nil [GC worker (idle)]:
+        runtime.gopark(0x5aa78a0?, 0x1?, 0x98?, 0xc0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000599f50 sp=0xc000599f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000599fe0 sp=0xc000599f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000599fe8 sp=0xc000599fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 24 gp=0xc000104c40 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb23b3541d0?, 0x3?, 0xe8?, 0x5?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00058ff50 sp=0xc00058ff30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc00058ffe0 sp=0xc00058ff50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00058ffe8 sp=0xc00058ffe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 39 gp=0xc0005828c0 m=nil [GC worker (idle)]:
+        runtime.gopark(0x5aa78a0?, 0x1?, 0xc4?, 0xd8?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00059bf50 sp=0xc00059bf30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc00059bfe0 sp=0xc00059bf50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00059bfe8 sp=0xc00059bfe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 25 gp=0xc000104e00 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb23b3541d0?, 0x3?, 0x8c?, 0xcd?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000595f50 sp=0xc000595f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000595fe0 sp=0xc000595f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000595fe8 sp=0xc000595fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 40 gp=0xc000582a80 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb22d173d88?, 0x1?, 0xcc?, 0xcd?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0005a1f50 sp=0xc0005a1f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc0005a1fe0 sp=0xc0005a1f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0005a1fe8 sp=0xc0005a1fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 26 gp=0xc000104fc0 m=nil [GC worker (idle)]:
+        runtime.gopark(0x5aa78a0?, 0x1?, 0x48?, 0x12?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000597f50 sp=0xc000597f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc000597fe0 sp=0xc000597f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000597fe8 sp=0xc000597fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 41 gp=0xc000582c40 m=nil [GC worker (idle)]:
+        runtime.gopark(0x3eb23b3541d0?, 0x1?, 0x58?, 0x4?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0005a3f50 sp=0xc0005a3f30 pc=0x39306e
+        runtime.gcBgMarkWorker()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1310 +0xe5 fp=0xc0005a3fe0 sp=0xc0005a3f50 pc=0x371985
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0005a3fe8 sp=0xc0005a3fe0 pc=0x3ca061
+        created by runtime.gcBgMarkStartWorkers in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/mgc.go:1234 +0x1c
+
+        goroutine 5 gp=0xc000dd1340 m=nil [select]:
+        runtime.gopark(0xc00059ff78?, 0x3?, 0x28?, 0xa?, 0xc00059ff72?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc00059fe18 sp=0xc00059fdf8 pc=0x39306e
+        runtime.selectgo(0xc00059ff78, 0xc00059ff6c, 0xc000c26f80?, 0x0, 0x0?, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/select.go:327 +0x725 fp=0xc00059ff38 sp=0xc00059fe18 pc=0x3a4b85
+        go.opencensus.io/stats/view.(*worker).start(0xc000c26f80)
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:292 +0x9f fp=0xc00059ffc8 sp=0xc00059ff38 pc=0xac3bdf
+        go.opencensus.io/stats/view.init.0.gowrap1()
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:34 +0x25 fp=0xc00059ffe0 sp=0xc00059ffc8 pc=0xac2f45
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc00059ffe8 sp=0xc00059ffe0 pc=0x3ca061
+        created by go.opencensus.io/stats/view.init.0 in goroutine 1
+        	/home/runner/go/pkg/mod/go.opencensus.io@v0.24.0/stats/view/worker.go:34 +0x8d
+
+        goroutine 16 gp=0xc000dd0e00 m=nil [select]:
+        runtime.gopark(0xc0024adef8?, 0x2?, 0x8?, 0x0?, 0xc0024adecc?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0024add70 sp=0xc0024add50 pc=0x39306e
+        runtime.selectgo(0xc0024adef8, 0xc0024adec8, 0xb2d05e00?, 0x0, 0x0?, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/select.go:327 +0x725 fp=0xc0024ade90 sp=0xc0024add70 pc=0x3a4b85
+        github.com/jpillora/overseer.WMIQueryWithContext({0x3b84d70, 0x5aa3c00}, {0xc0023ccc80, 0x267}, {0x2acfe00, 0xc0023ae2e8}, {0x0, 0x0, 0x0})
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:111 +0x1fd fp=0xc0024adf40 sp=0xc0024ade90 pc=0x7a6cfd
+        github.com/jpillora/overseer.GetWin32ProcWithContext({0x3b84d70, 0x5aa3c00}, 0x4190)
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:87 +0xc5 fp=0xc0024adfb0 sp=0xc0024adf40 pc=0x7a6a25
+        github.com/jpillora/overseer.GetWin32Proc(...)
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:80
+        github.com/jpillora/overseer.(*child).watchParent.func1()
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:70 +0x45 fp=0xc0024adfe0 sp=0xc0024adfb0 pc=0x7a6945
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0024adfe8 sp=0xc0024adfe0 pc=0x3ca061
+        created by github.com/jpillora/overseer.(*child).watchParent in goroutine 1
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:66 +0xd6
+
+        goroutine 82 gp=0xc0006056c0 m=9 mp=0xc000780008 [syscall]:
+        runtime.notetsleepg(0x5aa5b60, 0xffffffffffffffff)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/lock_sema.go:296 +0x31 fp=0xc0024a7fa0 sp=0xc0024a7f68 pc=0x360fd1
+        os/signal.signal_recv()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/sigqueue.go:152 +0x29 fp=0xc0024a7fc0 sp=0xc0024a7fa0 pc=0x3c5549
+        os/signal.loop()
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/os/signal/signal_unix.go:23 +0x13 fp=0xc0024a7fe0 sp=0xc0024a7fc0 pc=0x6ecb73
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0024a7fe8 sp=0xc0024a7fe0 pc=0x3ca061
+        created by os/signal.Notify.func1.1 in goroutine 1
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/os/signal/signal.go:151 +0x1f
+
+        goroutine 83 gp=0xc000605880 m=nil [chan receive]:
+        runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc0024a9ed0 sp=0xc0024a9eb0 pc=0x39306e
+        runtime.chanrecv(0xc000106a20, 0x0, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/chan.go:583 +0x3cd fp=0xc0024a9f48 sp=0xc0024a9ed0 pc=0x35aaad
+        runtime.chanrecv1(0x0?, 0x0?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/chan.go:442 +0x12 fp=0xc0024a9f70 sp=0xc0024a9f48 pc=0x35a6b2
+        github.com/jpillora/overseer.(*child).watchSignal.func1()
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child.go:109 +0x2b fp=0xc0024a9fe0 sp=0xc0024a9f70 pc=0x7a64ab
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc0024a9fe8 sp=0xc0024a9fe0 pc=0x3ca061
+        created by github.com/jpillora/overseer.(*child).watchSignal in goroutine 1
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child.go:108 +0xaa
+
+        goroutine 84 gp=0xc000605a40 m=nil [runnable, locked to thread]:
+        runtime.cgocall(0x3cb840, 0xc0000a1c08)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/cgocall.go:157 +0x3e fp=0xc000ce1bb0 sp=0xc000ce1b78 pc=0x358e1e
+        syscall.SyscallN(0x7ff9c91d4550?, {0xc001800010?, 0x2?, 0xc001800010?})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/syscall_windows.go:544 +0x107 fp=0xc000ce1c28 sp=0xc000ce1bb0 pc=0x3c6a27
+        syscall.(*Proc).Call(0x362a05?, {0xc001800010?, 0x2b6c8a0?, 0xc001800001?})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/syscall/dll_windows.go:166 +0x1c fp=0xc000ce1c68 sp=0xc000ce1c28 pc=0x41e49c
+        syscall.(*LazyProc).Call(0x5997260, {0xc001800010, 0x2, 0x2})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/syscall/dll_windows.go:286 +0x4a fp=0xc000ce1c98 sp=0xc000ce1c68 pc=0x41e8ca
+        github.com/mitchellh/go-ps.processes()
+        	/home/runner/go/pkg/mod/github.com/mitchellh/go-ps@v1.0.0/process_windows.go:112 +0x2be fp=0xc000ce1d78 sp=0xc000ce1c98 pc=0x849b7e
+        github.com/mitchellh/go-ps.Processes(...)
+        	/home/runner/go/pkg/mod/github.com/mitchellh/go-ps@v1.0.0/process.go:31
+        github.com/trufflesecurity/trufflehog/v3/pkg/cleantemp.CleanTempArtifacts({0x3b8c5e0, 0xc000cd69f0})
+        	/home/runner/work/trufflehog/trufflehog/pkg/cleantemp/cleantemp.go:55 +0x7c fp=0xc000ce1f60 sp=0xc000ce1d78 pc=0x8c481c
+        main.run.func1()
+        	/home/runner/work/trufflehog/trufflehog/main.go:251 +0x25 fp=0xc000ce1fe0 sp=0xc000ce1f60 pc=0x294e3e5
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000ce1fe8 sp=0xc000ce1fe0 pc=0x3ca061
+        created by main.run in goroutine 1
+        	/home/runner/work/trufflehog/trufflehog/main.go:250 +0x159
+
+        goroutine 85 gp=0xc000605c00 m=nil [chan receive]:
+        runtime.gopark(0x2?, 0xc000ecece0?, 0x1?, 0x0?, 0x10800000087?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/proc.go:402 +0xce fp=0xc000ce3eb0 sp=0xc000ce3e90 pc=0x39306e
+        runtime.chanrecv(0xc000ccccc0, 0x0, 0x1)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/chan.go:583 +0x3cd fp=0xc000ce3f28 sp=0xc000ce3eb0 pc=0x35aaad
+        runtime.chanrecv1(0x1?, 0x10100000001?)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/chan.go:442 +0x12 fp=0xc000ce3f50 sp=0xc000ce3f28 pc=0x35a6b2
+        main.run.func2()
+        	/home/runner/work/trufflehog/trufflehog/main.go:262 +0x58 fp=0xc000ce3fe0 sp=0xc000ce3f50 pc=0x294e1b8
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000ce3fe8 sp=0xc000ce3fe0 pc=0x3ca061
+        created by main.run in goroutine 1
+        	/home/runner/work/trufflehog/trufflehog/main.go:261 +0x32d
+
+        goroutine 69 gp=0xc000fe36c0 m=nil [runnable, locked to thread]:
+        runtime.cgocall(0x3cb840, 0xc000680408)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/cgocall.go:157 +0x3e fp=0xc000cdd9c0 sp=0xc000cdd988 pc=0x358e1e
+        syscall.getprocaddress(0x7ff9c9350000, 0xc000d425b0)
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/syscall_windows.go:470 +0xdd fp=0xc000cdd9f8 sp=0xc000cdd9c0 pc=0x3c65dd
+        syscall.getprocaddress(0x31d9a26?, 0xe?)
+        	<autogenerated>:1 +0x16 fp=0xc000cdda28 sp=0xc000cdd9f8 pc=0x3cf276
+        golang.org/x/sys/windows.(*DLL).FindProc(0xc0023ae300, {0x31d9a26, 0xe})
+        	/home/runner/go/pkg/mod/golang.org/x/sys@v0.18.0/windows/dll_windows.go:84 +0x76 fp=0xc000cddae0 sp=0xc000cdda28 pc=0x78f7d6
+        golang.org/x/sys/windows.(*LazyProc).Find(0x5997660)
+        	/home/runner/go/pkg/mod/golang.org/x/sys@v0.18.0/windows/dll_windows.go:309 +0xc7 fp=0xc000cddb40 sp=0xc000cddae0 pc=0x790a27
+        golang.org/x/sys/windows.(*LazyProc).mustFind(...)
+        	/home/runner/go/pkg/mod/golang.org/x/sys@v0.18.0/windows/dll_windows.go:323
+        golang.org/x/sys/windows.(*LazyProc).Call(0x5997660, {0x0, 0x0, 0x0})
+        	/home/runner/go/pkg/mod/golang.org/x/sys@v0.18.0/windows/dll_windows.go:347 +0x28 fp=0xc000cddb70 sp=0xc000cddb40 pc=0x790be8
+        github.com/go-ole/go-ole.CoUninitialize(...)
+        	/home/runner/go/pkg/mod/github.com/go-ole/go-ole@v1.2.6/com.go:96
+        github.com/yusufpapurcu/wmi.(*Client).coinitService.func1()
+        	/home/runner/go/pkg/mod/github.com/yusufpapurcu/wmi@v1.2.3/wmi.go:143 +0x70 fp=0xc000cddbb0 sp=0xc000cddb70 pc=0x79b770
+        github.com/yusufpapurcu/wmi.(*Client).coinitService.func2()
+        	/home/runner/go/pkg/mod/github.com/yusufpapurcu/wmi@v1.2.3/wmi.go:150 +0x1d fp=0xc000cddbc0 sp=0xc000cddbb0 pc=0x79b6dd
+        github.com/yusufpapurcu/wmi.(*Client).coinitService(0x2acfdc0?, {0x0, 0x0, 0x0})
+        	/home/runner/go/pkg/mod/github.com/yusufpapurcu/wmi@v1.2.3/wmi.go:164 +0x468 fp=0xc000cddc80 sp=0xc000cddbc0 pc=0x79b628
+        github.com/yusufpapurcu/wmi.(*Client).Query(0x59ff940, {0xc0023ccc80, 0x267}, {0x2acfe00?, 0xc0023ae2e8?}, {0x0, 0x0, 0x0})
+        	/home/runner/go/pkg/mod/github.com/yusufpapurcu/wmi@v1.2.3/wmi.go:245 +0x225 fp=0xc000cddf30 sp=0xc000cddc80 pc=0x79b9a5
+        github.com/yusufpapurcu/wmi.Query({0xc0023ccc80?, 0x0?}, {0x2acfe00?, 0xc0023ae2e8?}, {0x0?, 0x0?, 0x0?})
+        	/home/runner/go/pkg/mod/github.com/yusufpapurcu/wmi@v1.2.3/wmi.go:77 +0x72 fp=0xc000cddf80 sp=0xc000cddf30 pc=0x79b152
+        github.com/jpillora/overseer.WMIQueryWithContext.func1()
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:108 +0x38 fp=0xc000cddfe0 sp=0xc000cddf80 pc=0x7a6e58
+        runtime.goexit({})
+        	/opt/hostedtoolcache/go/1.22.1/x64/src/runtime/asm_amd64.s:1695 +0x1 fp=0xc000cddfe8 sp=0xc000cddfe0 pc=0x3ca061
+        created by github.com/jpillora/overseer.WMIQueryWithContext in goroutine 16
+        	/home/runner/go/pkg/mod/github.com/trufflesecurity/overseer@v1.2.7/proc_child_windows.go:107 +0x19e
+
+    parser: |
+      (none)

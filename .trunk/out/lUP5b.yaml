@@ -1,0 +1,35 @@
+trunk_cli_version: 1.20.1
+title: trufflehog exited with exit_code=0
+report:
+  - trufflehog exited with exit_code=0
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'docs\Lab8.ipynb' 'requirenment_old\requirements.txt'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'HOME=C:\Users\Admin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'docs\Lab8.ipynb' 'requirenment_old\requirements.txt')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 0
+      stdout: (none)
+      stderr: |
+        {"level":"info-0","ts":"2024-03-01T13:40:51-05:00","logger":"trufflehog","msg":"running source","source_manager_worker_id":"atGCg","with_units":true}
+        {"level":"info-0","ts":"2024-03-01T13:40:52-05:00","logger":"trufflehog","msg":"finished scanning","chunks":1,"bytes":502,"verified_secrets":0,"unverified_secrets":0,"scan_duration":"6.127ms"}
+
+    parser:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' 'C:\Users\Admin\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.3-4ebadccd80b22638/linters/trufflehog/trufflehog_to_sarif.py'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'Path=C:\Program Files\PowerShell\7;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python311\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin' PYTHONUTF8=1 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467/Scripts;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'VIRTUAL_ENV=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.68.3-e74afa3451062fd2f4c0160a4a1aa467' 'HOME=C:\Users\Admin' 'HOMEPATH=\Users\Admin' 'SystemRoot=C:\Windows' 'windir=C:\Windows' 'APPDATA=C:\Users\Admin\AppData\Roaming' 'LOCALAPPDATA=C:\Users\Admin\AppData\Local' 'USERPROFILE=C:\Users\Admin' 'TMP=C:\Users\Admin\AppData\Local\Temp' 'TEMP=C:\Users\Admin\AppData\Local\Temp' 'C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe' 'C:\Users\Admin\AppData\Local\trunk\plugins\https---github-com-trunk-io-plugins\v1.4.3-4ebadccd80b22638/linters/trufflehog/trufflehog_to_sarif.py')
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070\python3.exe: can't open file 'C:\\Users\\Admin\\AppData\\Local\\trunk\\plugins\\https---github-com-trunk-io-plugins\\v1.4.3-4ebadccd80b22638\\linters\\trufflehog\\trufflehog_to_sarif.py': [Errno 2] No such file or directory
+

@@ -1,0 +1,23 @@
+trunk_cli_version: 1.21.0
+title: black exited with exit_code=123
+report:
+  - black exited with exit_code=123
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\black\24.3.0-44dda8e988ffcce5fe8f38528db3707f/Scripts\black.exe' -q 'Lab10\VGG16_Dog_Cat_Class.ipynb'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\AppData\Local\Temp\trunk\11htwqk\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\AppData\Local\Temp\trunk\11htwqk\; env -i PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\Admin\AppData\Local\trunk\tools\black\24.3.0-44dda8e988ffcce5fe8f38528db3707f' 'PATH=C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\black\24.3.0-44dda8e988ffcce5fe8f38528db3707f/bin;C:\Users\Admin\AppData\Local\trunk\tools\black\24.3.0-44dda8e988ffcce5fe8f38528db3707f/Scripts;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'HOME=C:\Users\Admin' 'C:\Users\Admin\AppData\Local\trunk\tools\black\24.3.0-44dda8e988ffcce5fe8f38528db3707f/Scripts\black.exe' -q 'Lab10\VGG16_Dog_Cat_Class.ipynb')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 123
+      stdout: (none)
+      stderr: |
+        error: cannot format Lab10\VGG16_Dog_Cat_Class.ipynb: unindent does not match any outer indentation level (<tokenize>, line 3)
+
+    parser: |
+      (none)

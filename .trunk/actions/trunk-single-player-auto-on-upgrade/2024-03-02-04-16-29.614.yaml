@@ -1,0 +1,14 @@
+action_id: trunk-single-player-auto-on-upgrade
+date: 2024-03-02 04:16:29
+run: trunk on-upgrade --single-player-only -n --no-progress --allow-daemon-start=false --print-summary --scope=check,plugins,runtimes,tools
+run_from: ""
+trigger: schedule 24h+5m
+result:
+  exit_code: 0
+  out: "\r\n\x1b[1m1 linter was upgraded:\r\n\r\n\x1b[0m  ruff \x1b[90m0.2.2\x1b[0m → \x1b[92m0.3.0\x1b[0m\r\n\r\n\x1b[1m1 plugin was upgraded:\r\n\r\n\x1b[0m  trunk-io/plugins \x1b[90mv1.4.3\x1b[0m → \x1b[92mv1.4.4\x1b[0m\r\n\r\n"
+  err: ""
+timestamp: 1709352989
+full_timestamp:
+  nanos: 614820000
+  seconds: 1709352989
+trunk_version: 1.20.1

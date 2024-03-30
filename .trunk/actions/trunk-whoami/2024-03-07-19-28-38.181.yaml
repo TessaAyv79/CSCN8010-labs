@@ -1,0 +1,14 @@
+action_id: trunk-whoami
+date: 2024-03-07 19:28:38
+run: trunk whoami
+run_from: ""
+trigger: schedule 24h+1h
+result:
+  exit_code: 1
+  out: "\x1b[1m\x1b[31m✖ Not logged in. Run \"trunk login\" to login\x1b[0m\r\n"
+  err: ""
+timestamp: 1709839718
+full_timestamp:
+  nanos: 181606000
+  seconds: 1709839718
+trunk_version: 1.20.1
