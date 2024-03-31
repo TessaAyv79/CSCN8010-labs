@@ -1,0 +1,23 @@
+trunk_cli_version: 1.20.1
+title: black exited with exit_code=123
+report:
+  - black exited with exit_code=123
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\black\24.2.0-1667d52fc11401891d94ca8844860a28/Scripts\black.exe' -q 'docs\LAB8_tensorflow_Fmnist_EDA.ipynb'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\AppData\Local\Temp\trunk\edewe4n\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\AppData\Local\Temp\trunk\edewe4n\; env -i PYTHONUTF8=1 'VIRTUAL_ENV=C:\Users\Admin\AppData\Local\trunk\tools\black\24.2.0-1667d52fc11401891d94ca8844860a28' 'HOME=C:\Users\Admin' 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\black\24.2.0-1667d52fc11401891d94ca8844860a28/bin;C:\Users\Admin\AppData\Local\trunk\tools\black\24.2.0-1667d52fc11401891d94ca8844860a28/Scripts;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070/bin;C:\Users\Admin\AppData\Local\trunk\tools\python\3.10.8-2211cb108575de2785d77a26a1f8d070;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'C:\Users\Admin\AppData\Local\trunk\tools\black\24.2.0-1667d52fc11401891d94ca8844860a28/Scripts\black.exe' -q 'docs\LAB8_tensorflow_Fmnist_EDA.ipynb')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 123
+      stdout: (none)
+      stderr: |
+        error: cannot format docs\LAB8_tensorflow_Fmnist_EDA.ipynb: File 'docs\LAB8_tensorflow_Fmnist_EDA.ipynb' cannot be parsed as valid Jupyter notebook.
+
+    parser: |
+      (none)

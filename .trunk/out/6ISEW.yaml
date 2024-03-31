@@ -1,0 +1,23 @@
+trunk_cli_version: 1.21.0
+title: trufflehog exited with exit_code=1
+report:
+  - trufflehog exited with exit_code=1
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\11623.jpg'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'HOME=C:\Users\Admin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\11623.jpg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 1
+      stdout: (none)
+      stderr: |
+        {"level":"error","ts":"2024-03-24T10:13:41-04:00","logger":"trufflehog","msg":"error occurred with trufflehog updater 🐷","error":"parent process: OpenProcess: The parameter is incorrect."}
+
+    parser: |
+      (none)

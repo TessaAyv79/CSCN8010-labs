@@ -1,0 +1,14 @@
+action_id: trunk-single-player-auto-on-upgrade
+date: 2024-03-10 15:22:22
+run: trunk on-upgrade --single-player-only -n --no-progress --allow-daemon-start=false --print-summary --scope=check,plugins,runtimes,tools
+run_from: ""
+trigger: schedule 24h+5m
+result:
+  exit_code: 2
+  out: "\x1b[1m\x1b[31m✖ Trunk Internal Error: Please report this issue at https://slack.trunk.io (reference id: a55ba024a61f408e1cd37c0c1e22166d)\x1b[0m\r\n"
+  err: ""
+timestamp: 1710084142
+full_timestamp:
+  nanos: 356132000
+  seconds: 1710084142
+trunk_version: 1.20.1

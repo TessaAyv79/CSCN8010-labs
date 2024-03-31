@@ -1,0 +1,14 @@
+action_id: trunk-cache-prune
+date: 2024-03-13 19:33:48
+run: trunk cache prune --allow-daemon-start=false
+run_from: ""
+trigger: schedule 24h
+result:
+  exit_code: 0
+  out: "\x1b[1m\x1b[30m\x1b[107m  PRUNE  \x1b[0m\r\n\r\n \x1b[1m\x1b[4mPath\x1b[22m\x1b[24m             \x1b[1m\x1b[4mFiles Removed\x1b[22m\x1b[24m  \x1b[1m\x1b[4mBytes Removed\x1b[22m\x1b[24m  \x1b[1m\x1b[4mFiles Remaining\x1b[22m\x1b[24m  \x1b[1m\x1b[4mBytes Remaining\x1b[22m\x1b[24m\r\n C:\\Users\\Admin   0              0 B            0                0 B            \r\n  \\AppData\\Local                                                                \r\n  \\Temp\\trunk                                                                   \r\n C:\\Users\\Admin   0              0 B            0                0 B            \r\n  \\AppData\\Local                                                                \r\n  \\trunk\\repos                                                                  \r\n  \\76cbe02cdf613                                                                \r\n  ac43fc019aedf1                                                                \r\n  87dfe\\out                                                                     \r\n\r\n\x1b[1m\x1b[92m✔ Removed 0 files totaling 0 B\x1b[0m\r\n"
+  err: ""
+timestamp: 1710358428
+full_timestamp:
+  nanos: 416437000
+  seconds: 1710358428
+trunk_version: 1.20.1

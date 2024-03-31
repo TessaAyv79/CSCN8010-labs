@@ -1,0 +1,75 @@
+trunk_cli_version: 1.21.0
+title: trufflehog exited with exit_code=2
+report:
+  - trufflehog exited with exit_code=2
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\1165.jpg'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'HOME=C:\Users\Admin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.70.3-a6374b380c5dd68e63f3ca113f8bd27e\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'Lab10-1\Data\test1\test1\1165.jpg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        fatal error: runtime: cannot allocate memory
+
+        runtime stack:
+        runtime.throw({0x38e5193?, 0xfd923ff3e8?})
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/panic.go:1077 +0x65 fp=0xfd923ff398 sp=0xfd923ff368 pc=0xa6e225
+        runtime.stkbucket(0x1, 0x1a0, {0xfd923ff430, 0x7, 0x0?}, 0x1)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mprof.go:265 +0x359 fp=0xfd923ff3e8 sp=0xfd923ff398 pc=0xa62bd9
+        runtime.mProf_Malloc(0xc00008c820, 0x1a0)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/mprof.go:424 +0xbd fp=0xfd923ff568 sp=0xfd923ff3e8 pc=0xa62f5d
+        runtime.profilealloc(0xc00008c820?, 0x1a0?, 0x198?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/malloc.go:1364 +0x79 fp=0xfd923ff5a0 sp=0xfd923ff568 pc=0xa41659
+        runtime.mallocgc(0x198, 0x381aee0, 0x1)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/malloc.go:1212 +0x676 fp=0xfd923ff608 sp=0xfd923ff5a0 pc=0xa41216
+        runtime.newobject(0x0?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/malloc.go:1328 +0x25 fp=0xfd923ff630 sp=0xfd923ff608 pc=0xa41525
+        runtime.malg(0xffffffff)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:4454 +0x25 fp=0xfd923ff670 sp=0xfd923ff630 pc=0xa79185
+        runtime.allocm(0xc000064500, 0x3a32a58, 0xfd923ff710?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:1942 +0xcf fp=0xfd923ff6c8 sp=0xfd923ff670 pc=0xa7402f
+        runtime.newm(0x29cf6698290c?, 0xc000064500, 0x15?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:2393 +0x35 fp=0xfd923ff6f8 sp=0xfd923ff6c8 pc=0xa74855
+        runtime.startm(0xc000064500?, 0x1, 0x0)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:2619 +0x158 fp=0xfd923ff748 sp=0xfd923ff6f8 pc=0xa74f18
+        runtime.wakep()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:2755 +0xec fp=0xfd923ff778 sp=0xfd923ff748 pc=0xa754ac
+        runtime.newproc.func1()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:4482 +0x48 fp=0xfd923ff7a0 sp=0xfd923ff778 pc=0xa79348
+        runtime.systemstack()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:509 +0x49 fp=0xfd923ff7b0 sp=0xfd923ff7a0 pc=0xaa0ea9
+
+        goroutine 1 [running, locked to thread]:
+        runtime.systemstack_switch()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:474 +0x8 fp=0xc000093dc0 sp=0xc000093db0 pc=0xaa0e48
+        runtime.newproc(0x18000000000?)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:4475 +0x4b fp=0xc000093df8 sp=0xc000093dc0 pc=0xa792cb
+        runtime.init.6()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:310 +0x1a fp=0xc000093e10 sp=0xc000093df8 pc=0xa70c3a
+        runtime.doInit1(0x5c0b0c0)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:6735 +0xdd fp=0xc000093f40 sp=0xc000093e10 pc=0xa7df3d
+        runtime.doInit(...)
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:6702
+        runtime.main()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:198 +0x134 fp=0xc000093fe0 sp=0xc000093f40 pc=0xa708f4
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc000093fe8 sp=0xc000093fe0 pc=0xaa2e61
+
+        goroutine 2 [runnable]:
+        runtime.forcegchelper()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:313 fp=0xc00008ffe0 sp=0xc00008ffd8 pc=0xa70c60
+        runtime.goexit()
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/asm_amd64.s:1650 +0x1 fp=0xc00008ffe8 sp=0xc00008ffe0 pc=0xaa2e61
+        created by runtime.init.6 in goroutine 1
+        	/opt/hostedtoolcache/go/1.21.8/x64/src/runtime/proc.go:310 +0x1a
+
+    parser: |
+      (none)

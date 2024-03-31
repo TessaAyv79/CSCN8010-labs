@@ -1,0 +1,33 @@
+trunk_cli_version: 1.21.0
+title: trufflehog exited with exit_code=2
+report:
+  - trufflehog exited with exit_code=2
+  - linter:
+      command: |
+        'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'dataset_dogs_vs_cats\test\cats\cat.11316.jpg'
+      stdin_path: (none)
+      run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs\
+      timeout: 10m
+      rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs\; env -i 'HOME=C:\Users\Admin' 'PATH=C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:/Users/Admin/AppData/Local/trunk/tools/git-bash/2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin;C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/bin;C:\Users\Admin\AppData\Local\trunk\tools\git-bash\2.40.1-da0c3e1526d36e62bf43d06ec46c5052/usr/bin' 'C:\Users\Admin\AppData\Local\trunk\tools\trufflehog\3.71.0-ed95a093eb2afa1e2f4960672f14b994\trufflehog.exe' filesystem --json --fail --only-verified --no-update 'dataset_dogs_vs_cats\test\cats\cat.11316.jpg')
+      affects_cache:
+        []
+      direct_configs:
+        []
+      exit_status: exited
+      exit_code: 2
+      stdout: (none)
+      stderr: |
+        panic: compiler: VirtualAlloc error: The paging file is too small for this operation to complete.
+
+        goroutine 1 [running]:
+        github.com/tetratelabs/wazero/internal/engine/wazevo.(*engine).compileModule(0xc000e0c6e0, {0x3b84d70, 0x5aa3c00}, 0xc000e15a40, {0x0, 0x0, 0x0}, 0x0)
+        	/home/runner/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.0/internal/engine/wazevo/engine.go:281 +0xba5
+        github.com/tetratelabs/wazero/internal/engine/wazevo.(*engine).CompileModule(0xc000e0c6e0, {0x3b84d70, 0x5aa3c00}, 0xc000e15a40, {0x0, 0x0, 0x0}, 0x0)
+        	/home/runner/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.0/internal/engine/wazevo/engine.go:139 +0xae
+        github.com/tetratelabs/wazero.(*runtime).CompileModule(0xc000e629f0, {0x3b84d70, 0x5aa3c00}, {0x58e8680, 0x6c218, 0x6c218})
+        	/home/runner/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.0/runtime.go:237 +0x206
+        github.com/wasilibs/go-re2/internal.init.0()
+        	/home/runner/go/pkg/mod/github.com/wasilibs/go-re2@v1.5.1/internal/re2_wazero.go:171 +0x3d4
+
+    parser: |
+      (none)

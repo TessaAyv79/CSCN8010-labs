@@ -1,0 +1,14 @@
+action_id: trunk-upgrade-available
+date: 2024-03-27 15:03:07
+run: trunk upgrade --notify --allow-daemon-start=false
+run_from: ""
+trigger: .trunk/trunk.yaml
+result:
+  exit_code: 0
+  out: ""
+  err: ""
+timestamp: 1711551787
+full_timestamp:
+  nanos: 49741000
+  seconds: 1711551787
+trunk_version: 1.21.0

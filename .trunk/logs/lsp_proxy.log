@@ -1,0 +1,168 @@
+[02-24 12:54:13] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-24 13:27:24] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-24 13:35:31] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-24 13:35:31] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab7/MNIST_Classification_Performance_Evaluation.ipynb
+[02-24 20:42:43] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-24 20:48:26] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-25 16:34:15] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 20:18:24] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 21:06:22] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 22:28:58] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 22:45:35] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 22:47:10] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[02-27 23:44:40] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-01 13:40:48] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-01 13:40:49] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/docs/Lab8.ipynb
+[03-01 13:43:41] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 11:05:46] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 11:05:46] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/lab8.ipynb
+[03-07 11:10:53] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 11:10:57] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [server.cc:58] Internal exception in the file_watcher thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [server.cc:58] Internal exception in the trunk_actions_worker thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 11:10:57] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:60214: WSA Error
+[03-07 12:59:58] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 13:05:05] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 13:05:06] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 22:41:48] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 22:46:55] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 22:53:53] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-07 22:59:04] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:65520: WSA Error
+[03-07 22:59:04] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:65520: WSA Error
+[03-07 22:59:06] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-08 08:41:57] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-08 08:47:04] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-08 11:33:23] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-08 11:38:31] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-08 12:18:26] [spec.cc:867] Malformed LSP headers: Content-Length: 44
+
+
+[03-08 12:18:26] [spec.cc:868] Malformed LSP content:                                             
+[03-08 12:18:26] [message_receiver.cc:28] Failed to parse message: [json.exception.parse_error.101] parse error at line 1, column 45: syntax error while parsing value - unexpected end of input; expected '[', '{', or a literal
+[03-08 12:18:26] [shared_server_context.hh:129] Message processing failed: [json.exception.parse_error.101] parse error at line 1, column 45: syntax error while parsing value - unexpected end of input; expected '[', '{', or a literal
+[03-09 06:00:09] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-09 06:05:16] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-10 11:17:09] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-10 11:22:22] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:59016: WSA Error
+[03-10 11:22:22] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:59016: WSA Error
+[03-10 11:22:23] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-13 15:15:37] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-13 15:33:46] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:59333: WSA Error
+[03-13 15:33:46] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:59333: WSA Error
+[03-13 15:33:48] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-14 00:20:56] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-14 00:26:05] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-14 00:26:09] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [server.cc:58] Internal exception in the trunk_actions_worker thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [server.cc:58] Internal exception in the file_watcher thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 00:26:09] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:57308: WSA Error
+[03-14 13:25:42] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-14 13:30:50] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-14 13:30:54] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [server.cc:58] Internal exception in the file_watcher thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [server.cc:58] Internal exception in the trunk_actions_worker thread: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-14 13:30:54] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55312: WSA Error
+[03-16 18:47:20] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-16 18:52:29] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-16 19:00:57] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-16 19:06:06] [login.cc:53] GetUserRequest failed with status 16: Invalid token received 
+[03-16 21:01:14] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-16 21:06:23] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-17 11:35:43] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-17 23:59:54] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-18 00:05:02] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-18 01:02:02] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-18 01:09:08] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-18 01:14:21] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-23 23:42:09] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-23 23:49:10] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-23 23:49:14] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50815: WSA Error
+[03-23 23:49:14] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50815: WSA Error
+[03-23 23:49:14] [shared_server_context.hh:129] Message processing failed: trunk daemon is not running
+[03-23 23:49:14] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50815: WSA Error
+[03-23 23:49:14] [shared_server_context.hh:129] Message processing failed: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50815: WSA Error
+[03-23 23:49:14] [sentry.cc:372] Trunk Internal Error
+---
+trunk_cli_version: 1.21.0
+title: Internal trunk error occurred. Please report this issue to us @ https://slack.trunk.io
+report:
+  - "failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50815: WSA Error"
+[03-24 00:47:19] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 00:47:19] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 00:52:26] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 00:52:27] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 00:52:29] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 00:52:30] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 10:01:21] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 10:01:27] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab9/Lab10.ipynb
+[03-24 10:01:28] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 10:03:42] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55819: WSA Error
+[03-24 10:03:42] [shared_server_context.hh:129] Message processing failed: trunk daemon is not running
+[03-24 10:04:37] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55819: WSA Error
+[03-24 10:04:37] [client.cc:20] GRPC Failed (error code UNAVAILABLE): failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:55819: WSA Error
+[03-24 10:04:48] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 10:05:39] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 10:05:54] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab9/Lab10.ipynb
+[03-24 10:06:17] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10-1/VGG16%20_for_Dogs_Cats_Classification.ipynb
+[03-24 10:10:01] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 10:11:13] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 10:12:36] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: std::bad_alloc
+[03-24 10:12:36] [shared_server_context.hh:129] Message processing failed: std::bad_alloc
+[03-24 10:13:32] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10-1/VGG16%20_for_Dogs_Cats_Classification.ipynb
+[03-24 10:14:14] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab9/Lab10.ipynb
+[03-24 10:16:38] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: std::bad_alloc
+[03-24 10:16:38] [shared_server_context.hh:129] Message processing failed: std::bad_alloc
+[03-24 23:51:50] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-24 23:52:45] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-24 23:53:41] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-24 23:53:41] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-25 10:12:03] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-25 10:15:09] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-25 10:15:09] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 00:26:59] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-26 00:28:50] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10-1/VGG16%20_for_Dogs_Cats_Classification.ipynb
+[03-26 00:30:07] [file_state.hh:53] Received empty text for file from file read file:///C%3A/Users/Admin/Documents/MLAI/CSCN8010-labs/Lab10/VGG16_Dog_Cat_Class.ipynb
+[03-26 00:31:19] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 00:31:19] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 00:31:28] [submission_buffer.cc:110] diagnostics buffer 1: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 00:31:28] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 10:10:07] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-26 10:14:08] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-26 10:14:08] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 14:36:58] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-28 14:38:18] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 14:38:18] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 23:19:00] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-28 23:20:47] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 23:20:47] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 23:20:50] [submission_buffer.cc:110] diagnostics buffer 1: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-28 23:20:50] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 00:03:48] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-29 03:48:00] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-29 03:49:30] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:49:30] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:49:35] [submission_buffer.cc:110] diagnostics buffer 2: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:49:35] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:49:43] [submission_buffer.cc:110] diagnostics buffer 1: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:49:43] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:53:03] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-29 03:53:58] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 03:53:58] [shared_server_context.hh:129] Message processing failed: _ftelli64() failed for path 'C:\Users\Admin\Documents\MLAI\CSCN8010-labs\Lab10-1\working\dogs_vs_cats_photos.npy': No error
+[03-29 22:07:59] [login.cc:51] GetUserRequest failed with status 16: Invalid token received 
+[03-29 22:28:58] [submission_buffer.cc:110] diagnostics buffer 0: Submission failed: std::bad_alloc
+[03-29 22:28:58] [shared_server_context.hh:129] Message processing failed: std::bad_alloc

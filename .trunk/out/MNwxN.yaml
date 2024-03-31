@@ -1,0 +1,14 @@
+trunk_cli_version: 1.21.0
+title: Exception occurred while executing trunk-upgrade-available
+report:
+  - message: Unable to find binary in PATH
+    binary: bash
+    PATH:
+      - C:\/bin
+      - C:\/usr/bin
+  - command: |
+      bash -c 'C:/Users/Admin/AppData/Local/trunk/cli/trunk-1.21.0-windows/trunk.exe upgrade --notify --allow-daemon-start=false' trunk-upgrade-available
+    stdin_path: (none)
+    run_from: C:\Users\Admin\Documents\MLAI\CSCN8010-labs/
+    timeout: 0
+    rerun: (cd C:\Users\Admin\Documents\MLAI\CSCN8010-labs/; env -i 'HOME=C:\Users\Admin' 'Path=C:\Program Files\PowerShell\7;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python311\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin' 'PATH=C:\/bin;C:\/usr/bin' 'HOMEPATH=\Users\Admin' 'SystemRoot=C:\Windows' 'windir=C:\Windows' 'APPDATA=C:\Users\Admin\AppData\Roaming' 'LOCALAPPDATA=C:\Users\Admin\AppData\Local' 'USERPROFILE=C:\Users\Admin' 'TMP=C:\Users\Admin\AppData\Local\Temp' 'TEMP=C:\Users\Admin\AppData\Local\Temp' bash -c 'C:/Users/Admin/AppData/Local/trunk/cli/trunk-1.21.0-windows/trunk.exe upgrade --notify --allow-daemon-start=false' trunk-upgrade-available)
